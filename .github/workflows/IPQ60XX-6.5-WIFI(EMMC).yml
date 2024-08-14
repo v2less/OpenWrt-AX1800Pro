@@ -170,6 +170,7 @@ jobs:
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
           - 这是带WIFI以及NSS且适用于EMMC的6.6内核固件
+          - 默认没有安装任何服务，基础版本
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
