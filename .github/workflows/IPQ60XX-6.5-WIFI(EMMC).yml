@@ -1,4 +1,4 @@
-name: IPQ60XX-6.8-WIFI(EMMC)
+name: IPQ60XX-6.5-WIFI(EMMC)
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
 env:
   REPO_URL: https://github.com/LiBwrt-op/openwrt-6.x.git
   REPO_BRANCH: main
-  CONFIG_FILE: configs/ipq60xx-6.8-wifi(emmc).config
+  CONFIG_FILE: configs/ipq60xx-6.5-wifi(emmc).config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: IPQ60XX-6.8-WIFI(EMMC)
+  FIRMWARE_TAG: IPQ60XX-6.5-WIFI(EMMC)
   TZ: Asia/Shanghai
 
 jobs:
@@ -170,13 +170,12 @@ jobs:
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
           - 这是带WIFI以及NSS且适用于EMMC的6.6内核固件
-          - 安装 OpenWrt Clash WireGuard DDNS-Go UPnP IGD 和 PCP/NAT-PMP 服务
+          - 默认没有安装任何服务，基础版本
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🌐 默认地址: 192.168.1.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
-          - 固件编译 OpenWrt Clash 客户端
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           - ${{ env.VERSION_INFO }}
